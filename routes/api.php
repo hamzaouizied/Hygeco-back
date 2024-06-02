@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\ContactCommercialController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,8 @@ Route::group([
     Route::post('/refresh', [AuthController::class, 'refresh'])->middleware('auth:api')->name('refresh');
     Route::post('/me', [AuthController::class, 'me'])->middleware('auth:api')->name('me');
     Route::get('/contacts', [ContactFormController::class, 'index'])->middleware('auth:api')->name('contacts');
+    Route::get('/contacts-commercial', [ContactCommercialController::class, 'index'])->middleware('auth:api')->name('contactCommercial');
 });
 Route::post('/submit-form', [ContactFormController::class, 'submitForm']);
+Route::post('/submit-forms', [ContactCommercialController::class, 'submitForm']);
 
