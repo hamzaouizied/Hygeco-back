@@ -19,6 +19,22 @@ return new class extends Migration {
             $table->text('note');
             $table->timestamps();
         });
+
+        Schema::create('contact_commercial', function (Blueprint $table) {
+            $table->id();
+            $table->string('nom_entreprise');
+            $table->string('email');
+            $table->string('telephone');
+            $table->string('nom_responsable');
+
+
+            $table->string('rue');
+            $table->string('unite');
+            $table->string('ville');
+            $table->string('province');
+            $table->string('code_postal');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -27,5 +43,6 @@ return new class extends Migration {
     public function down(): void
     {
         Schema::dropIfExists('contact_forms');
+        Schema::dropIfExists('contact_commercial');
     }
 };

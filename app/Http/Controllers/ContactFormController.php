@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ContactForm;
+use App\Notifications\contactCreated;
 
 
 class ContactFormController extends Controller
@@ -11,7 +12,7 @@ class ContactFormController extends Controller
 
     public function index()
     {
-        $contacts = ContactForm::get()->toArray();
+        $contacts = ContactForm::orderBy('id', 'desc')->get()->toArray();
         return $contacts;
     }
 
@@ -28,6 +29,9 @@ class ContactFormController extends Controller
         $contactForm = new ContactForm($validatedData);
 
         $contactForm->save();
+
+        $contactForm->notify(new contactCreated());
+
 
         return response()->json(['message' => 'Form submitted successfully', 'data' => $validatedData]);
     }
