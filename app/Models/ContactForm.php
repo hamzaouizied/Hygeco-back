@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 class ContactForm extends Model
 {
     use HasFactory;
-    use Notifiable;
+    // use Notifiable;
 
 
     /**
@@ -29,6 +29,7 @@ class ContactForm extends Model
         'address',
         'email',
         'service',
+        'object',
         'note',
     ];
 }

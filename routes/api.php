@@ -34,6 +34,6 @@ Route::group([
     Route::get('/contacts', [ContactFormController::class, 'index'])->middleware('auth:api')->name('contacts');
     Route::get('/contacts-commercial', [ContactCommercialController::class, 'index'])->middleware('auth:api')->name('contactCommercial');
 });
-Route::post('/submit-form', [ContactFormController::class, 'submitForm']);
-Route::post('/submit-forms', [ContactCommercialController::class, 'submitForm']);
+Route::post('/submit-contact-form', [ContactFormController::class, 'submitForm']);
+Route::post('/submit-commercial-form', [ContactCommercialController::class, 'submitForm']);
 
