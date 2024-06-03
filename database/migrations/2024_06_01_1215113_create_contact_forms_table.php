@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('address');
             $table->string('email');
             $table->string('service');
+            $table->string('object');
             $table->text('note');
             $table->timestamps();
         });
