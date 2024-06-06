@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ContactForm;
-use App\Notifications\contactCreated;
+use App\Notifications\ContactCreated;
 
 
 class ContactFormController extends Controller
@@ -23,6 +23,7 @@ class ContactFormController extends Controller
             'address' => 'required',
             'email' => 'required|email',
             'service' => 'required',
+            'object' => 'required',
             'note' => 'required',
         ]);
 
@@ -30,7 +31,8 @@ class ContactFormController extends Controller
 
         $contactForm->save();
 
-        $contactForm->notify(new contactCreated());
+        $contactForm->notify(new ContactCreated($contactForm));
+
 
 
         return response()->json(['message' => 'Form submitted successfully', 'data' => $validatedData]);

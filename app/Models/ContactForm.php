@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
 class ContactForm extends Model
-{
-    use HasFactory;
-    use Notifiable;
+{   
+    use HasFactory,Notifiable;
+    // use Notifiable;
+
 
 
     /**

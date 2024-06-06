@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('address');
             $table->string('email');
             $table->string('service');
+            $table->string('object');
             $table->text('note');
             $table->timestamps();
         });
@@ -26,8 +27,6 @@ return new class extends Migration {
             $table->string('email');
             $table->string('telephone');
             $table->string('nom_responsable');
-
-
             $table->string('rue');
             $table->string('unite');
             $table->string('ville');
@@ -46,3 +45,5 @@ return new class extends Migration {
         Schema::dropIfExists('contact_commercial');
     }
 };
+
+
