@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ContactForm;
+
 use App\Models\Notification;
+
 
 use App\Notifications\ContactCreated;
 use App\Events\ContactFormSubmitted;
@@ -31,10 +33,15 @@ class ContactFormController extends Controller
     
         $contactForm = new ContactForm($validatedData);
         $contactForm->save();
+
         event(new ContactFormSubmitted($contactForm));
         Log::info('ContactFormSubmitted event fired');
         $contactForm->notify(new ContactCreated($contactForm));
         
+
+
+
+
 
         return response()->json(['message' => 'Form submitted successfully', 'data' => $validatedData]);
     }

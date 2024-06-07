@@ -8,7 +8,9 @@ use Illuminate\Notifications\Notifiable;
 
 class ContactForm extends Model
 {
+
     use HasFactory,Notifiable;
+
     // use Notifiable;
 
 

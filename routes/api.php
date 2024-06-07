@@ -35,6 +35,6 @@ Route::group([
     Route::get('/contacts-commercial', [ContactCommercialController::class, 'index'])->middleware('auth:api')->name('contactCommercial');
     Route::get('/notifications/contact-created', [ContactFormController::class, 'getContactCreatedNotifications'])->middleware('auth:api')->name('contactCreatedNotifications');
 });
-Route::post('/submit-form', [ContactFormController::class, 'submitForm']);
-Route::post('/submit-forms', [ContactCommercialController::class, 'submitForm']);
+Route::post('/submit-contact-form', [ContactFormController::class, 'submitForm']);
+Route::post('/submit-commercial-form', [ContactCommercialController::class, 'submitForm']);
 
