@@ -4,12 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable;
 
-class ContactForm extends Model
+class Notification extends Model
 {
-    use HasFactory,Notifiable;
-    // use Notifiable;
+    use HasFactory;
+   
 
 
     /**
@@ -17,7 +16,7 @@ class ContactForm extends Model
      *
      * @var string
      */
-    protected $table = 'contact_forms';
+    protected $table = 'notifications';
 
     /**
      * The attributes that are mass assignable.
@@ -25,11 +24,10 @@ class ContactForm extends Model
      * @var array
      */
     protected $fillable = [
-        'first_name',
-        'address',
-        'email',
-        'service',
-        'object',
-        'note',
+        'type',
+        'notifiable_id',
+        'notifiable_type',
+        'data',
+        'read_at',
     ];
 }

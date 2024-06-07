@@ -33,6 +33,7 @@ Route::group([
     Route::post('/me', [AuthController::class, 'me'])->middleware('auth:api')->name('me');
     Route::get('/contacts', [ContactFormController::class, 'index'])->middleware('auth:api')->name('contacts');
     Route::get('/contacts-commercial', [ContactCommercialController::class, 'index'])->middleware('auth:api')->name('contactCommercial');
+    Route::get('/notifications/contact-created', [ContactFormController::class, 'getContactCreatedNotifications'])->middleware('auth:api')->name('contactCreatedNotifications');
 });
 Route::post('/submit-form', [ContactFormController::class, 'submitForm']);
 Route::post('/submit-forms', [ContactCommercialController::class, 'submitForm']);
