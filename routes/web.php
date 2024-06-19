@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,21 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//Home Page
 Route::get('/', function () {
     return view('welcome');
+});
+
+//contact
+Route::get('/pages/contact', function () {
+    return view('contact');
+});
+
+Route::controller(AuthenController::class)->group(function () {
+    Route::get('/registration', 'registration')->name('register')->middleware('alreadyLoggedIn');
+    Route::post('/registration-user', 'registerUser')->name('register.perform');
+    Route::get('/login', 'login')->name('login')->middleware('alreadyLoggedIn');
+    Route::post('/login-user', 'loginUser')->name('login.perform');
+    Route::get('/dashboard', 'dashboard')->middleware('isLoggedIn');
+    Route::get('/logout', 'logout');
 });
