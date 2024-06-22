@@ -22,6 +22,22 @@ Route::get('/', function () {
 Route::get('/pages/contact', function () {
     return view('contact');
 });
+//about
+Route::get('/pages/about', function () {
+    return view('a-propos');
+});
+//contact-commercial
+Route::get('/pages/contact-commercial', function () {
+    return view('contact-commercial');
+});
+//plan
+Route::get('/pages/plan', function () {
+    return view('plan');
+});
+//service
+Route::get('/pages/services', function () {
+    return view('service');
+});
 
 Route::controller(AuthenController::class)->group(function () {
     Route::get('/registration', 'registration')->name('register')->middleware('alreadyLoggedIn');
