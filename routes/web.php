@@ -45,5 +45,5 @@ Route::controller(AuthenController::class)->group(function () {
     Route::get('/login', 'login')->name('login')->middleware('alreadyLoggedIn');
     Route::post('/login-user', 'loginUser')->name('login.perform');
     Route::get('/dashboard', 'dashboard')->middleware('isLoggedIn');
-    Route::get('/logout', 'logout');
+Route::post('/logout', 'logout')->name('logout');
 });

@@ -102,7 +102,7 @@
                                 <div data-v-1f72e2ab="" id="block-16" class="widget-footer widget_block footer__item">
                                     <h4 data-v-1f72e2ab="" class="footer__title"
                                         style="font-weight: 700; text-transform: capitalize; color: rgb(48, 199, 181); display: inline-block; margin-bottom: 41px;">
-                                        Liens rapides </h4>
+                                        Compagnie </h4>
                                     <div data-v-1f72e2ab="" class="wp-widget-group__inner-blocks">
                                         <ul data-v-1f72e2ab="" style="padding: 0px; margin: 0px; list-style: none;">
                                             <li data-v-1f72e2ab=""><a data-v-1f72e2ab="" href="/pages/about">À
@@ -110,7 +110,7 @@
                                             <li data-v-1f72e2ab=""><a data-v-1f72e2ab=""
                                                     href="/pages/contact">Contactez-Nous</a></li>
                                             <li data-v-1f72e2ab=""><a data-v-1f72e2ab=""
-                                                    href="/pages/service-menage">Services</a></li>
+                                                    href="/pages/services">Services Résidentiels</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -125,11 +125,11 @@
                                     <div data-v-1f72e2ab="" class="wp-widget-group__inner-blocks">
                                         <ul data-v-1f72e2ab="" style="padding: 0px; margin: 0px; list-style: none;">
                                             <li data-v-1f72e2ab=""><a data-v-1f72e2ab=""
-                                                    href="/pages/reservation">Menage</a></li>
+                                                    href="/pages/reservation">Ménage</a></li>
                                             <li data-v-1f72e2ab=""><a data-v-1f72e2ab=""
                                                     href="/pages/reservation-buandrie">Buanderie</a></li>
                                             <li data-v-1f72e2ab=""><a data-v-1f72e2ab=""
-                                                    href="/pages/menage-commercial">Menage commercial</a></li>
+                                                    href="/pages/contact-commercial">Services Commerciaux</a></li>
                                         </ul>
                                     </div>
                                 </div>

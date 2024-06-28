@@ -28,7 +28,7 @@
                             </li>
                              <li data-v-39bd6a58="" class="mx-2 nav-item">
                                 <a data-v-39bd6a58="" aria-current="page" href="/pages/plan"
-                                    class="nav-link {{ Request::is('pages/plan') ? 'active' : '' }}" >Bon Plans</a>
+                                    class="nav-link {{ Request::is('pages/plan') ? 'active' : '' }}" >Bons Plans</a>
                             </li>
                              <li data-v-39bd6a58="" class="mx-2 nav-item">
                                 <a data-v-39bd6a58="" aria-current="page" href="/pages/contact-commercial"

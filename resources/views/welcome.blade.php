@@ -174,7 +174,7 @@
                       animation-delay: 0.4s;
                       animation-name: fadeInDown;
                     " data-v-b695219e="">
-                                    <a href="/pages/contact" data-v-b695219e=""><span data-v-b695219e=""> Voir Plus
+                                    <a href="/pages/services" data-v-b695219e=""><span data-v-b695219e=""> Voir Plus
                                         </span></a>
                                 </div>
                             </div>
@@ -316,7 +316,7 @@
                     animation-delay: 0.4s;
                     animation-name: fadeInDown;
                   " data-v-b695219e="">
-                                <a href="/pages/contact" data-v-b695219e=""><span data-v-b695219e=""> Voir Plus
+                                <a href="/pages/contact" data-v-b695219e=""><span data-v-b695219e=""> Contactez Nous
                                     </span></a>
                             </div>
                         </div>
@@ -445,11 +445,11 @@
                                                     class="odometer-digit-inner" data-v-b695219e=""><span
                                                         class="odometer-ribbon" data-v-b695219e=""><span
                                                             class="odometer-ribbon-inner" data-v-b695219e=""><span
-                                                                class="odometer-value" data-v-b695219e="">1</span><span
-                                                                class="odometer-value" data-v-b695219e="">8</span><span
+                                                                class="odometer-value" data-v-b695219e="">2</span><span
+                                                                class="odometer-value" data-v-b695219e="">7</span><span
                                                                 class="odometer-value" data-v-b695219e="">2</span><span
                                                                 class="odometer-value"
-                                                                data-v-b695219e="">5</span></span></span></span></span>
+                                                                data-v-b695219e="">8</span></span></span></span></span>
                                         </div>
                                     </span><!-- &lt;span class=&quot;plus__icon&quot;&gt;
                 &lt;svg aria-hidden=&quot;true&quot; class=&quot;e-font-icon-svg e-fas-percent&quot; viewBox=&quot;0 0 448 512&quot;

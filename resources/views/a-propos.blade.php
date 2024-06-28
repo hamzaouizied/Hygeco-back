@@ -88,32 +88,25 @@
             padding: 100px;
           "
         >
-          <span
+          <!-- <span
             class="mask opacity-8"
             style="background-color: #bfbfbf"
             data-v-c9547750=""
-          ></span>
+          ></span> -->
           <div
             class="container pb-10 pb-lg-9 pt-7 postion-relative z-index-2"
             data-v-c9547750=""
           >
             <div class="row" data-v-c9547750="">
-              <div class="mx-auto text-center col-md-6 mt-4" data-v-c9547750="">
+              <div class=" col-md-6 mt-4" data-v-c9547750="">
                 <h3
-                  class="text-center"
-                  style="color: #30c7b5"
-                  data-v-c9547750=""
+                  class="text-dark"
+                  
+                  data-v-c9547750="" style="font-size: 2.5rem; color: #000000"
                 >
                   À Propos
                 </h3>
-                <p
-                  class="text-center"
-                  style="color: #30c7b5; font-size: 1rem"
-                  data-v-c9547750=""
-                >
-                  Hygeco est une entreprise basée à Montréal qui offre une gamme
-                  de services professionnels de nettoyage et de buanderie.
-                </p>
+             
               </div>
             </div>
             <div class="row" data-v-c9547750="">
@@ -160,7 +153,7 @@
                       "
                       data-v-c9547750=""
                     >
-                      Qui Somme-nous ?
+                      Qui Sommes-nous ?
                     </h2>
                   </div>
                   <div class="howit-work-info" data-v-c9547750="">
@@ -207,7 +200,7 @@
                     "
                     data-v-c9547750=""
                   >
-                    <a href="/pages/service-menage" data-v-c9547750=""
+                    <a href="/pages/services" data-v-c9547750=""
                       ><span data-v-c9547750=""> Voir Plus </span></a
                     >
                   </div>
@@ -2729,10 +2722,10 @@
                               ><span
                                 class="odometer-ribbon-inner"
                                 data-v-c9547750=""
-                                ><span class="odometer-value" data-v-c9547750=""
-                                  >1</span
                                 >
                                 <span class="odometer-value" data-v-c9547750=""
+                                  >1</span
+                                ><span class="odometer-value" data-v-c9547750=""
                                   >8</span
                                 ><span class="odometer-value" data-v-c9547750=""
                                   >2</span
@@ -2746,7 +2739,7 @@
                       </div>
                     </span>
                   </div>
-                  <p data-v-c9547750="">maison éclatantes</p>
+                  <p data-v-c9547750="">Maison éclatantes</p>
                 </div>
                 <div class="vline" data-v-c9547750=""></div>
                 <div class="text-center" data-v-c9547750="">
@@ -2789,11 +2782,13 @@
                                 class="odometer-ribbon-inner"
                                 data-v-c9547750=""
                                 ><span class="odometer-value" data-v-c9547750=""
-                                  >9</span
+                                  >2</span
                                 ><span class="odometer-value" data-v-c9547750=""
-                                  >9</span
+                                  >7</span
                                 ><span class="odometer-value" data-v-c9547750=""
-                                  >9</span
+                                  >2</span
+                                ><span class="odometer-value" data-v-c9547750=""
+                                  >8</span
                                 ></span
                               ></span
                             ></span
@@ -3284,13 +3279,14 @@
                 <!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if-->
               </div>
               <div data-v-c9547750="" class="text-center mt-4">
+                <a href="/pages/contact">
                 <button
                   data-v-c9547750=""
                   class="btn btn-primary"
                   style="background-color: rgb(48, 199, 181)"
                 >
-                  Voir plus
-                </button>
+Contactez Nous                </button>
+                </a>
               </div>
             </div>
           </div>

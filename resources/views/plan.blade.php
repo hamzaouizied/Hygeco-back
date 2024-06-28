@@ -55,16 +55,14 @@
             background-size: cover;
             padding: 100px;
           ">
-                <span class="mask opacity-8" style="background-color: #bfbfbf" data-v-cae0cce8=""></span>
+                <!-- <span class="mask opacity-8" style="background-color: #bfbfbf" data-v-cae0cce8=""></span> -->
                 <div class="container pb-10 pb-lg-9 pt-7 postion-relative z-index-2" data-v-cae0cce8="">
                     <div class="row" data-v-cae0cce8="">
-                        <div class="mx-auto text-center col-md-6 mt-4" data-v-cae0cce8="">
-                            <h3 class="text-center" style="color: #30c7b5" data-v-cae0cce8="">
-                                Nos Bon Plans
+                        <div class=" col-md-6 mt-4" data-v-cae0cce8="">
+                            <h3 class="text-dark" style="font-size: 2.5rem; "data-v-cae0cce8="">
+                               Nos Bon Plans
                             </h3>
-                            <p class="text-center" style="color: #30c7b5" data-v-cae0cce8="">
-                                Découvrez nos offres spéciales et promotions exclusives !
-                            </p>
+                           
                         </div>
                     </div>
                 </div>
@@ -216,7 +214,7 @@
                                     </div>
                                     <div class="pt-0 text-center card-body text-lg-start" style="padding: 0px">
                                         <img src="/img/600.png" alt="Service Image" class="img-fluid w-100"
-                                            style="height: 66%; object-fit: cover" /><a href="/pages/contact"
+                                            style="height: 70%; object-fit: cover" /><a href="/pages/contact"
                                             class="mt-3 mb-0 btn btn-icon d-lg-block bg-gradient-success">Personaliser
                                             <!-- <i class="fas fa-arrow-right ms-1"></i> --></a>
                                     </div>
@@ -382,10 +380,14 @@
                             <!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if-->
                         </div>
                         <div data-v-cae0cce8="" class="text-center mt-4">
-                            <button data-v-cae0cce8="" class="btn btn-primary"
-                                style="background-color: rgb(48, 199, 181)">
-                                Voir plus
-                            </button>
+                             <a href="/pages/contact">
+                <button
+                  data-v-c9547750=""
+                  class="btn btn-primary"
+                  style="background-color: rgb(48, 199, 181)"
+                >
+Contactez Nous                </button>
+                </a>
                         </div>
                     </div>
                 </div>
