@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
+
 
 class AuthenController extends Controller
 {
@@ -72,10 +74,67 @@ class AuthenController extends Controller
     ///Logout
     public function logout()
     {
-        $data = array();
         if (Session::has('loginId')) {
-            Session::pull('loginId');
-            return redirect('login');
+        Session::pull('loginId');
+        return redirect('login');
+    }
+    return redirect('login'); 
+    }
+
+    public function profile()
+    {
+            $data = array();
+            if (Session::has('loginId')) {
+                $data = User::where('id', '=', Session::get('loginId'))->first();
+            }
+            return view('profile.index', compact('data'));
+    }
+    public function postProfile(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+        ]);
+
+        $user = User::where('id', '=', Session::get('loginId'))->first();
+        if ($user) {
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            $result = $user->save();
+
+            if ($result) {
+                return redirect()->back()->with('success', 'Profile updated successfully!');
+            } else {
+                return redirect()->back()->with('error', 'Something went wrong!');
+            }
+        } else {
+            return redirect()->back()->with('error', 'User not found!');
         }
     }
+    public function getPassword(){
+        $data = array();
+            if (Session::has('loginId')) {
+                $data = User::where('id', '=', Session::get('loginId'))->first();
+            }
+        return view('profile.password',compact('data'));
+    }
+    public function postPassword(Request $request) {
+         $request->validate([
+            'newpassword' => 'required|min:6|max:30|confirmed'
+        ]);
+
+        $user = User::where('id', '=', Session::get('loginId'))->first();
+        if ($user) {
+            $user->password = Hash::make($request->newpassword); // Hash the new password
+            $user->save();
+
+            return redirect()->back()->with('success', 'Password has been changed successfully');
+        } else {
+            return redirect()->back()->with('error', 'User not found!');
+        }
+
+
+        
+    }
+
 }

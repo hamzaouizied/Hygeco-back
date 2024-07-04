@@ -2,81 +2,88 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="/img/favicon.png">
-    <title>
-        Argon Dashboard 2 by Creative Tim
-    </title>
-    <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-    <!-- Nucleo Icons -->
-    <link href="{{asset('assets/css/nucleo-icons.css')}}" rel="stylesheet" />
-    <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="{{url('assets/css/nucleo-svg.css')}}" rel=" stylesheet" />
-    <!-- CSS Files -->
-    <link id="pagestyle" href="{{asset('assets/css/argon-dashboard.css')}}" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hygeco | Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{url('plugins/fontawesome-free/css/all.min.css')}}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="{{url('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{url('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{{url('plugins/jqvmap/jqvmap.min.css')}}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{url('dist/css/adminlte.min.css')}}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{url('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{url('plugins/daterangepicker/daterangepicker.css')}}">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{{ url('plugins/summernote/summernote-bs4.min.css') }}">
 </head>
 
-<body class="{{ $class ?? '' }}">
-    @guest
-        @if (!in_array(request()->route()->getName(), ['profile', 'profile-static']))
-            <div class="min-height-300 bg-primary position-absolute w-100"></div>
-        @elseif (in_array(request()->route()->getName(), ['profile-static', 'profile']))
-            <div class="position-absolute w-100 min-height-300 top-0"
-                style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/profile-layout-header.jpg'); background-position-y: 50%;">
-                <span class="mask bg-primary opacity-6"></span>
-            </div>
-        @endif
-        
-        <main class="main-content border-radius-lg">
-            @yield('content')
-        </main>
-        @include('components.fixed-plugin')
-    @endguest
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
 
-    @auth
-        @if (in_array(request()->route()->getName(), ['sign-in-static', 'sign-up-static', 'login', 'register', 'recover-password', 'rtl', 'virtual-reality']))
-            @yield('content')
-        @else
-            @if (!in_array(request()->route()->getName(), ['profile', 'profile-static']))
-                <div class="min-height-300 bg-primary position-absolute w-100"></div>
-            @elseif (in_array(request()->route()->getName(), ['profile-static', 'profile']))
-                <div class="position-absolute w-100 min-height-300 top-0"
-                    style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/profile-layout-header.jpg'); background-position-y: 50%;">
-                    <span class="mask bg-primary opacity-6"></span>
-                </div>
-            @endif
-            @include('layouts.navbars.auth.sidenav')
-            <main class="main-content border-radius-lg">
-                @yield('content')
-            </main>
-            @include('components.fixed-plugin')
-        @endif
-    @endauth
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src= "{{url('dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60" width="60">
+    </div>
 
-    <!--   Core JS Files   -->
-    <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
-    <script src="{{ asset('assets/js/core/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
-    <script>
-        var win = navigator.platform.indexOf('Win') > -1;
-        if (win && document.querySelector('#sidenav-scrollbar')) {
-            var options = {
-                damping: '0.5'
-            }
-            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-        }
-    </script>
-    <!-- Github buttons -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{ asset('assets/js/argon-dashboard.js') }}"></script>
-    @stack('js');
+   @include('layouts.header')
+
+    <!-- Main Sidebar Container -->
+@yield('content')
+
+
+@include('layouts.footer')
+
+    <!-- Control Sidebar -->
+   
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="{{url('plugins/jquery/jquery.min.js')}}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{url('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="{{url('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!-- ChartJS -->
+<script src="{{url('plugins/chart.js/Chart.min.js')}}"></script>
+<!-- Sparkline -->
+<script src="{{url('plugins/sparklines/sparkline.js')}}"></script>
+<!-- JQVMap -->
+<script src="{{url('plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+<script src="{{url('plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{url('plugins/jquery-knob/jquery.knob.min.js')}}"></script>
+<!-- daterangepicker -->
+<script src="{{url('plugins/moment/moment.min.js')}}"></script>
+<script src="{{url('plugins/daterangepicker/daterangepicker.js')}}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{{url('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+<!-- Summernote -->
+<script src="{{url('plugins/summernote/summernote-bs4.min.js')}}"></script>
+<!-- overlayScrollbars -->
+<script src="{{url('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+<!-- AdminLTE App -->
+<script src="{{url('dist/js/adminlte.js')}}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{url('dist/js/demo.js')}}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{url('dist/js/pages/dashboard.js')}}"></script>
 </body>
 
 </html>

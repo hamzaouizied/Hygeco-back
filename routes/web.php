@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenController;
+use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +46,14 @@ Route::controller(AuthenController::class)->group(function () {
     Route::post('/registration-user', 'registerUser')->name('register.perform');
     Route::get('/login', 'login')->name('login')->middleware('alreadyLoggedIn');
     Route::post('/login-user', 'loginUser')->name('login.perform');
-    Route::get('/dashboard', 'dashboard')->middleware('isLoggedIn');
+    Route::get('/dashboard', 'dashboard')->name('dashoard')->middleware('isLoggedIn');
+    Route::get('/profile', 'profile')->name('profile')->middleware('isLoggedIn');
+
 Route::post('/logout', 'logout')->name('logout');
 });
+
+Route::post('/profile/update', 'App\Http\Controllers\AuthenController@postProfile')->name('postProfile');
+Route::get('/passsword/change', 'App\Http\Controllers\AuthenController@getPassword')->name('getPassword');
+Route::post('/passsword/change', 'App\Http\Controllers\AuthenController@postPassword')->name('postPassword');
+
+
